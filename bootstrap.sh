@@ -12,7 +12,7 @@ echo -e "\n--- Installing Go-Lang ---\n"
 sudo apt-get update
 sudo apt-get -y upgrade
 wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
-sudo tar -xvf go1.13.3.linux-amd64.tar.gz
+sudo tar -xvf go1.10.3.linux-amd64.tar.gz
 sudo mv go /usr/local
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -21,6 +21,7 @@ mkdir $GOPATH
 
 # Installing Dara packages
 echo -e "\n--- Installing Dara packages ---\n"
+mkdir $GOPATH
 mkdir $GOPATH/src
 mkdir $GOPATH/src/github.com
 cd $GOPATH/src/github.com

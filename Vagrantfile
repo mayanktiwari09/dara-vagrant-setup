@@ -28,10 +28,4 @@ Vagrant.configure(2) do |config|
   # "localhost:8000" will access port 8000 on the guest machine.
   config.vm.network :forwarded_port, guest: 8000, host: 8000
 
-  # Link current repo into VM
-  config.vm.synced_folder "../../../..", "/ottertune"
-  
-  # Custom provisioning and setup script
-  config.vm.provision :shell, path: "bootstrap.sh"
-
 end
